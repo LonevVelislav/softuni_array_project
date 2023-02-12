@@ -210,10 +210,9 @@ arrayList.addEventListener('click', function (e) {
     }
 
     if (e.target.classList.contains('btn_splice')) {
-      let startValue = Number(spliceStartValue.value);
-      let endValue = Number(spliceEndValue.value);
-      console.log(startValue);
-      arraySplice(mainArray, startValue, endValue);
+      let deletedCount = Number(spliceStartValue.value);
+      let startValue = Number(spliceEndValue.value);
+      arraySplice(mainArray, startValue, deletedCount);
     }
     if (e.target.classList.contains('btn_insert')) {
       if (mainArray.length >= 10) {

@@ -122,7 +122,7 @@ const arraySlice = function (arr, start, end) {
 };
 
 const arraySplice = function (arr, start, count) {
-  if (!arr[start]) {
+  if (start < 0) {
     if (errorContainer.classList.contains('correct-message')) {
       errorContainer.classList.remove('correct-message');
     }

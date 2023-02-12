@@ -11,8 +11,8 @@ const unshiftValue = document.querySelector('.input_unshift');
 const sliceStartValue = document.querySelector('.input_start_slice');
 const sliceEndValue = document.querySelector('.input_end_slice');
 
-const spliceStartValue = document.querySelector('.input_start_splice');
-const spliceEndValue = document.querySelector('.input_end_splice');
+const spliceStartValue = document.querySelector('.input_startIndex_splice');
+const spliceAmountValue = document.querySelector('.input_amount_splice');
 
 const insertStartValue = document.querySelector('.input_start_insert');
 const insertEndValue = document.querySelector('.input_end_insert');
@@ -210,8 +210,8 @@ arrayList.addEventListener('click', function (e) {
     }
 
     if (e.target.classList.contains('btn_splice')) {
-      let deletedCount = Number(spliceStartValue.value);
-      let startValue = Number(spliceEndValue.value);
+      let deletedCount = Number(spliceAmountValue.value);
+      let startValue = Number(spliceStartValue.value);
       arraySplice(mainArray, startValue, deletedCount);
     }
     if (e.target.classList.contains('btn_insert')) {

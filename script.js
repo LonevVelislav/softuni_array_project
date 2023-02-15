@@ -100,7 +100,10 @@ const unshiftValueInArray = function (arr, value) {
 };
 
 const arraySlice = function (arr, start, end) {
-  if (isNaN(start) && isNaN(end)) {
+  if (!end) {
+    errorContainer.classList.add('correct-message');
+    renderError(`The returned portion is ${arr.slice(start)}`);
+  } else if (isNaN(start) && isNaN(end)) {
     errorContainer.classList.add('correct-message');
     renderError(`The returned portion is ${arr.join(' ')}`);
   } else if (start >= end) {
